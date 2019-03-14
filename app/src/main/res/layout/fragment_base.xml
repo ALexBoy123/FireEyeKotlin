@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--空布局-->
+            <ViewStub
+                android:id="@+id/vs_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:inflatedId="@+id/panel_import"
+                android:layout="@layout/layout_empty_view" />
+
+            <!--加载失败-->
+            <ViewStub
+                android:id="@+id/vs_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:inflatedId="@+id/panel_import"
+                android:layout="@layout/layout_error_view" />
+
+            <!--加载中..-->
+            <ViewStub
+                android:id="@+id/vs_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:inflatedId="@+id/panel_import"
+                android:layout="@layout/layout_loading_view" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
